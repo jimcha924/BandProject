@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+<%- include ('partials/structure/head.ejs') %> 
+</head>
+
+<body id="albumList">
+    <header>
+        <div class="jumbotron hidden-xs">
+        </div><!-- jumbotron -->
+
+
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a href="/" class="navbar-brand">Five Iron Frenzy</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/albums" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Speakers <span class="caret"><span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/albums">FIF Albums</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/albums/upbeatsandbeatdowns">Upbeats and Beatdowns</a></li>
+
+                                <li><a href="/albums/ournewestalbumever">Our Newest Album Ever</a></li>
+
+                                <li><a href="/albums/quantityisjob1-ep">Quantity Is Job 1 - ep</a></li>
+
+                                <li><a href="/albums/allthehypethatmoneycanbuy">All the Hype That Money Can Buy</a></li>
+
+                                <li><a href="/albums/fiveironfrenzy2:electricboogaloo">Five Iron Frenzy 2: Electric Boogaloo</a></li>
+
+                                <li><a href="/albums/theendisnear">The End is Near</a></li>
+
+                                <li><a href="/albums/betweenpavementandstars">Between Pavement and Stars - ep</a></li>
+
+                                <li><a href="/albums/engineofamillionplots">Engine of a Million Plots</a></li>
+
+                                <li><a href="/albums/untilthisshakesapart">Until This Shakes Apart</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/feedback">Feedback</a></li>
+                        <li><a href="/chat">Chat</a></li>
+                    </ul><!-- nav -->
+                </div><!-- navbar-collapse -->
+            </div><!-- container -->
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <article class="albumslist ">
+                    <div class="container">
+                        <div class="row">
+
+
+                            <% fifAlbums.forEach(albumObj => { %>
+                        
+                            
+                            <div class="col-sm-8 ">
+                                <h3 class="albumslist-title"><%= albumObj.title %> </h3>
+                                <h5 class="albumslist-name">with <a href="/albums/<%= albumObj.shortname %> "><%= albumObj.name %> </a>
+                                </h5>
+                                <p class="albmuslist-info">
+                                    <a href="/albums/<%= albumObj.shortname %>">
+                                        <img class="albumslist-img img-circle pull-left"
+                                            src="/images/albums/<%= albumObj.shortname %>_tn.jpg"
+                                            alt="Photo of <%= albumObj.name %>"></a>
+                                    </a>
+                                    </a>
+                                    <%= albumObj.summary %>
+                                </p>
+                            </div>
+                            <% }) %>
+                            
+                            
+
+                        </div><!-- row -->
+                    </div><!-- container -->
+                </article>
+            </div><!-- primary -->
+            <aside class="col-sm-4">
+                <article class="sidebar">
+                    <h1 class="sidebar-title">Album artwork</h1>
+                    <p class="sidebar-body"></p>
+                    <div class="pixgrid clearfix">
+
+                    <%- include ('partials/content/artwork.ejs') %> 
+                    </div>
+                </article>
+            </aside><!-- secondary -->
+        </div>
+    </div><!-- container -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+
+
+    
+    
+
+</body>
+
+</html>

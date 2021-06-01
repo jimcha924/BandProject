@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include ('partials/structure/head.ejs') %> 
+</head>
+
+<body>
+
+    <header>
+        <div class="jumbotron hidden-xs">
+        </div><!-- jumbotron -->
+
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a href="/" class="navbar-brand">Five Iron Frenzy</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/albums" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Discography <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/albums">FIF Discography</a></li>
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        </li>
+                    </ul><!-- nav -->
+                </div><!-- navbar-collapse -->
+            </div><!-- container -->
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="maincontent">
+
+                    <article class="article card m-5">
+                        <div class="card-body">
+                            <h1 class="article-title header-font">Biography</h1>
+                            <p>Five Iron Frenzy is an American band formed in Denver, Colorado, in 1995. Best known for playing ska punk music characterized by an offbeat sense of humor and prominent Christian themes, Five Iron was one of the pioneering figures of the Christian ska movement which emerged with ska's mainstream revival in the 1990s. Since 2000, the band's music has shifted away from ska to embrace stronger alternative rock and pop punk influences, though it continues to feature Christian overtones despite several members' changes in religious beliefs.</p>
+                        </div>
+                    </article>
+
+                    <article class="article card m-5">
+                        <div class="card-body">
+                            <div>
+                                <img src="/public/images/FIFphoto2.jpeg" alt="Five Iron Frenzy in concert in 2019.">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article card m-5">
+                        <div class="card-body">
+                            <h2 class="article-title header-font">Early Life</h2>
+                            <p>Five Iron experienced their greatest commercial success during the late 1990s as part of the American ska revival, touring prolifically within both Christian and secular markets, where the band gained a cult following for their energetic live shows typified by humorous stage antics which often drew attention to various social causes and charities. By the early 2000s, Five Iron had independently sold a total of almost one million albums, though a number of factors eventually contributed to their break-up in 2003. After an eight-year hiatus, the band reunited in 2011 to resume intermittent touring, launching a coincident Kickstarter campaign to finance a new album which raised a then record-breaking $207,980. The resultant album, Engine of a Million Plots, was released in November 2013.</p>
+                            <p>Five Iron is often noted for the broad tonal range of their lyricism, covering subject matter both spiritual and secular in manners both serious and satirical. Many of the band's songs are firmly rooted in Social Gospel convictions, often exploring themes of Christian hypocrisy and fundamentalism, manifest destiny and the injustices done to Native Americans, and faith-based criticisms of capitalism, consumerism, nationalism, xenophobia, racism, homophobia and even the Christian music industry, as well as more traditional and uplifting songs of praise and worship. The band is also known for their comic songs which rely on droll self-deprecating and self-referential humor, absurdist non-sequiturs and frequent references to pop culture and geek culture.</p>
+                        </div> 
+                    </article>
+
+                </div>
+            </div>
+            <aside class="col-sm-4">
+                <div class="pixgrid">
+                    <!-- /images/artwork/Lorenzo_Garcia_01_tn.jpg -->
+                    <%- include ('partials/content/artwork.ejs') %> 
+                </div>
+            </aside>
+            <aside class="col-sm-4">
+                <div class="row mt-5">
+                    <iframe style="border-radius: 10px;" src=<iframe src="https://open.spotify.com/embed/artist/1BcAEs4W94BrXMmVCOgwSx" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+
+        </div>
+    </div>
+    
+</div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
